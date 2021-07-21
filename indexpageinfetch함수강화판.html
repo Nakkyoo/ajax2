@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <script>
+  function ffetch(name){
+    fetch(name).then(function(response){
+      response.text().then(function(text){
+      document.querySelector('article').innerHTML = text;
+      })
+    })
+  }
+  </script>
+</head>
+<body>
+  <h1><a onclick=";">WEB</a></h1>
+  <ol>
+    <li><a onclick="ffetch('HTML')">HTML</a></li>
+    <li><a onclick="ffetch('CSSS')">CSS</a></li>
+    <li><a onclick="ffetch('JAVASCRIPT')">JavaScript</a></li>
+  </ol>
+  <article></article>
+
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+
+</body>
+</html>
